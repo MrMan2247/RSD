@@ -172,28 +172,31 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center; }
-    .wrapper .content .classes .class .bucket {
-      -webkit-box-flex: 1;
-      -webkit-flex: auto;
-          -ms-flex: auto;
-              flex: auto;
-      height: 334px;
-      width: 274px; }
-      .wrapper .content .classes .class .bucket.bucket1 {
-        background: url("../img/bucket1.jpg") no-repeat center center; }
-      .wrapper .content .classes .class .bucket.bucket2 {
-        background: url("../img/bucket2.jpg") no-repeat center center; }
-      .wrapper .content .classes .class .bucket.bucket3 {
-        background: url("../img/bucket3.jpg") no-repeat center center; }
-      .wrapper .content .classes .class .bucket span {
-        color: #fff;
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        font-family: Apple Chancery;
-        font-size: 29px; }
+    .wrapper .content .classes .class a {
+      text-decoration: none;
+      padding: 20px; }
+      .wrapper .content .classes .class a .bucket {
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+            -ms-flex: auto;
+                flex: auto;
+        height: 334px;
+        width: 274px; }
+        .wrapper .content .classes .class a .bucket.bucket1 {
+          background: url("../img/bucket1.jpg") no-repeat center center; }
+        .wrapper .content .classes .class a .bucket.bucket2 {
+          background: url("../img/bucket2.jpg") no-repeat center center; }
+        .wrapper .content .classes .class a .bucket.bucket3 {
+          background: url("../img/bucket3.jpg") no-repeat center center; }
+        .wrapper .content .classes .class a .bucket span {
+          color: #fff;
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          font-family: Apple Chancery;
+          font-size: 29px; }
 
 .wrapper .content .register {
   max-width: 960px;
