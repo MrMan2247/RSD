@@ -4,9 +4,6 @@
 /**
  * Core Styles
  */
-header {
-  padding: 30px 0; }
-
 .wrapper .masthead {
   height: 500px;
   width: 100vw;
@@ -71,9 +68,6 @@ header {
         .wrapper .content.interior .page .event table th {
           text-align: left;
           font-weight: normal; }
-
-footer {
-  padding: 40px 0; }
 
 /**
  * App Specific Settings
