@@ -128,11 +128,10 @@ body {
   background: #f2f1f8;
   color: #000;
   margin-bottom: 5px;
-  font-family: arial; }
-  .wrapper .topper .email {
-    padding: 10px 30px; }
-  .wrapper .topper .password {
-    padding: 10px 30px; }
+  font-family: arial;
+  padding: 9px; }
+  .wrapper .topper a {
+    font-size: 0.75em; }
 
 .wrapper header {
   display: -webkit-box;
@@ -187,18 +186,42 @@ body {
         z-index: 1; }
         .wrapper header nav .link:hover .drop-down {
           display: block;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
           background: #8950a0;
           width: 300px;
-          height: 245px;
+          height: 170px;
           position: absolute;
           z-index: 2;
-          top: 132px;
-          text-align: left;
-          padding: 20px; }
+          top: 133px;
+          text-align: left; }
+          .wrapper header nav .link:hover .drop-down.last-child {
+            height: 286px; }
           .wrapper header nav .link:hover .drop-down a {
-            padding: 20px 0;
             border-bottom: 1px #fff solid;
-            font-family: arial; }
+            font-family: arial;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 100%;
+                -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            margin: 0;
+            height: 57px;
+            padding: 15px; }
+            .wrapper header nav .link:hover .drop-down a:hover {
+              background: #703a86;
+              padding-left: 20px;
+              -webkit-transition: ease 0.3s;
+              transition: ease 0.3s; }
+            .wrapper header nav .link:hover .drop-down a:last-child {
+              border: none; }
 
 .wrapper .masthead-slider {
   width: 100vw;
@@ -230,36 +253,49 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center; }
-    .wrapper .content .classes .class .bucket {
-      -webkit-box-flex: 1;
-      -webkit-flex: auto;
-          -ms-flex: auto;
-              flex: auto;
-      height: 334px;
-      width: 274px; }
-      .wrapper .content .classes .class .bucket.bucket1 {
-        background: url("../img/bucket1.jpg") no-repeat center center; }
-      .wrapper .content .classes .class .bucket.bucket2 {
-        background: url("../img/bucket2.jpg") no-repeat center center; }
-      .wrapper .content .classes .class .bucket.bucket3 {
-        background: url("../img/bucket3.jpg") no-repeat center center; }
-      .wrapper .content .classes .class .bucket span {
-        color: #fff;
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        font-family: Apple Chancery;
-        font-size: 29px; }
+    .wrapper .content .classes .class a {
+      text-decoration: none;
+      padding: 20px; }
+      .wrapper .content .classes .class a .bucket {
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+            -ms-flex: auto;
+                flex: auto;
+        height: 334px;
+        width: 274px; }
+        .wrapper .content .classes .class a .bucket.bucket1 {
+          background: url("../img/bucket1.jpg") no-repeat center center; }
+        .wrapper .content .classes .class a .bucket.bucket2 {
+          background: url("../img/bucket2.jpg") no-repeat center center; }
+        .wrapper .content .classes .class a .bucket.bucket3 {
+          background: url("../img/bucket3.jpg") no-repeat center center; }
+        .wrapper .content .classes .class a .bucket span {
+          color: #fff;
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          font-family: Apple Chancery;
+          font-size: 29px; }
 
 .wrapper .content .register {
   max-width: 960px;
   margin: auto;
-  padding: 90px 0; }
+  padding: 60px 0; }
+  .wrapper .content .register h2 {
+    font-family: Apple Chancery;
+    text-align: center;
+    margin: 0; }
+  .wrapper .content .register h3 {
+    font-family: Apple Chancery;
+    text-align: center;
+    margin: 5px 0 50px; }
   .wrapper .content .register h4 {
     margin: 0;
-    padding: 0 0 100px; }
+    padding: 100px 0 100px; }
+  .wrapper .content .register p {
+    font-family: arial; }
   .wrapper .content .register a {
     text-decoration: none; }
     .wrapper .content .register a .register-btn {
@@ -283,30 +319,34 @@ body {
   margin: auto;
   text-align: center;
   font-family: arial; }
+  .wrapper footer img {
+    padding-top: 30px; }
   .wrapper footer .footer-content {
     margin: auto;
     max-width: 960px;
-    text-align: center;
-    padding: 30px 0; }
-    .wrapper footer .footer-content .footer-links {
+    text-align: left;
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .wrapper footer .footer-content .info {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 30%;
+          -ms-flex: 0 0 30%;
+              flex: 0 0 30%;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      text-align: center;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      padding-top: 30px; }
-      .wrapper footer .footer-content .footer-links .link {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 110px;
-            -ms-flex: 0 0 110px;
-                flex: 0 0 110px; }
-        .wrapper footer .footer-content .footer-links .link a {
-          text-decoration: none;
-          color: #000; }
+              justify-content: center; }
