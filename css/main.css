@@ -100,7 +100,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   width: 100%;
-  background: #FFF; }
+  background: url("../img/rep-bg.jpg"); }
 
 * {
   -webkit-box-sizing: border-box;
