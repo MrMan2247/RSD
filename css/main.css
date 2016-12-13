@@ -51,11 +51,10 @@ body {
   background: #f2f1f8;
   color: #000;
   margin-bottom: 5px;
-  font-family: arial; }
-  .wrapper .topper .email {
-    padding: 10px 30px; }
-  .wrapper .topper .password {
-    padding: 10px 30px; }
+  font-family: arial;
+  padding: 9px; }
+  .wrapper .topper a {
+    font-size: 0.75em; }
 
 .wrapper header {
   display: -webkit-box;
@@ -110,18 +109,38 @@ body {
         z-index: 1; }
         .wrapper header nav .link:hover .drop-down {
           display: block;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
           background: #8950a0;
           width: 300px;
-          height: 245px;
+          height: 170px;
           position: absolute;
           z-index: 2;
           top: 132px;
           text-align: left;
           padding: 20px; }
+          .wrapper header nav .link:hover .drop-down.last-child {
+            height: 270px; }
           .wrapper header nav .link:hover .drop-down a {
-            padding: 20px 0;
             border-bottom: 1px #fff solid;
-            font-family: arial; }
+            font-family: arial;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 100%;
+                -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            margin: 0;
+            height: 49px;
+            padding: 15px 0; }
+            .wrapper header nav .link:hover .drop-down a:last-child {
+              border: none; }
 
 .wrapper .masthead-slider {
   width: 100vw;

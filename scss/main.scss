@@ -47,13 +47,10 @@ body {
     color: #000;
     margin-bottom: 5px;
     font-family: arial;
+    padding: 9px;
 
-    .email {
-      padding: 10px 30px;
-    }
-
-    .password {
-      padding: 10px 30px;
+    a {
+      font-size: 0.75em;
     }
   }
 
@@ -97,19 +94,34 @@ body {
 
           .drop-down {
             display: block;
+            display: flex;
+            flex-wrap: wrap;
             background: #8950a0;
             width: 300px;
-            height: 245px;
+            height: 170px;
             position: absolute;
             z-index: 2;
             top: 132px;
             text-align: left;
             padding: 20px;
 
+            &.last-child {
+              height: 270px;
+            }
+
             a {
-              padding: 20px 0;
-              border-bottom: 1px #fff solid;
-              font-family: arial;
+              border-bottom: 1px #fff solid;font-family: arial;
+              flex: 0 0 100%;
+              color: #fff;
+              text-decoration: none;
+              position: relative;
+              margin: 0;
+              height: 49px;
+              padding: 15px 0;
+
+              &:last-child {
+                border: none;
+              }
             }
           }
         }
