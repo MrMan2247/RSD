@@ -1,0 +1,235 @@
+/**
+ * App Specific Settings
+ */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes color-me-in {
+  0% {
+    background: #cb7ab3; }
+  100% {
+    background: #8950a0; } }
+
+@keyframes color-me-in {
+  0% {
+    background: #cb7ab3; }
+  100% {
+    background: #8950a0; } }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  width: 100%;
+  background: url("../img/rep-bg.jpg"); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/**
+ * General Styles Below
+ */
+.wrapper .topper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+  -webkit-justify-content: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin: auto;
+  background: #f2f1f8;
+  color: #000;
+  margin-bottom: 5px;
+  font-family: arial; }
+  .wrapper .topper .email {
+    padding: 10px 30px; }
+  .wrapper .topper .password {
+    padding: 10px 30px; }
+
+.wrapper header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 960px;
+  margin: auto; }
+  .wrapper header img {
+    margin: 0 10px;
+    height: 83px;
+    width: 77px;
+    -webkit-animation: fadein 0.5s;
+            animation: fadein 0.5s; }
+  .wrapper header nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 0;
+    -webkit-animation: fadein 0.5s;
+            animation: fadein 0.5s; }
+    .wrapper header nav .link {
+      -webkit-box-flex: 1;
+      -webkit-flex: auto;
+          -ms-flex: auto;
+              flex: auto;
+      color: #000;
+      padding: 35px 0;
+      width: 150px;
+      font-family: arial; }
+      .wrapper header nav .link .drop-down {
+        display: none; }
+      .wrapper header nav .link:hover {
+        background: #8950a0;
+        color: #fff;
+        z-index: 1; }
+        .wrapper header nav .link:hover .drop-down {
+          display: block;
+          background: #8950a0;
+          width: 300px;
+          height: 245px;
+          position: absolute;
+          z-index: 2;
+          top: 132px;
+          text-align: left;
+          padding: 20px; }
+          .wrapper header nav .link:hover .drop-down a {
+            padding: 20px 0;
+            border-bottom: 1px #fff solid;
+            font-family: arial; }
+
+.wrapper .masthead-slider {
+  width: 100vw;
+  height: -webkit-calc(100vh - 202px);
+  height: calc(100vh - 202px);
+  background: violet; }
+
+.wrapper .content h4 {
+  text-align: center;
+  font-size: 33px;
+  margin: 60px 0;
+  font-family: Apple Chancery; }
+
+.wrapper .content .classes {
+  background: #cb7ab3;
+  padding: 50px 0; }
+  .wrapper .content .classes .class {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    max-width: 960px;
+    margin: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center; }
+    .wrapper .content .classes .class .bucket {
+      -webkit-box-flex: 1;
+      -webkit-flex: auto;
+          -ms-flex: auto;
+              flex: auto;
+      height: 334px;
+      width: 274px; }
+      .wrapper .content .classes .class .bucket.bucket1 {
+        background: url("../img/bucket1.jpg") no-repeat center center; }
+      .wrapper .content .classes .class .bucket.bucket2 {
+        background: url("../img/bucket2.jpg") no-repeat center center; }
+      .wrapper .content .classes .class .bucket.bucket3 {
+        background: url("../img/bucket3.jpg") no-repeat center center; }
+      .wrapper .content .classes .class .bucket span {
+        color: #fff;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        font-family: Apple Chancery;
+        font-size: 29px; }
+
+.wrapper .content .register {
+  max-width: 960px;
+  margin: auto;
+  padding: 90px 0; }
+  .wrapper .content .register h4 {
+    margin: 0;
+    padding: 0 0 100px; }
+  .wrapper .content .register a {
+    text-decoration: none; }
+    .wrapper .content .register a .register-btn {
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+      background: #cb7ab3;
+      color: #fff;
+      font-family: arial;
+      margin: auto;
+      -webkit-transition: background .15s ease;
+      transition: background .15s ease; }
+      .wrapper .content .register a .register-btn:hover {
+        color: #fff;
+        background: #8950a0;
+        -webkit-transition: background .15s ease;
+        transition: background .15s ease; }
+
+.wrapper footer {
+  background: #f2f1f8;
+  margin: auto;
+  text-align: center;
+  font-family: arial; }
+  .wrapper footer .footer-content {
+    margin: auto;
+    max-width: 960px;
+    text-align: center;
+    padding: 30px 0; }
+    .wrapper footer .footer-content .footer-links {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      padding-top: 30px; }
+      .wrapper footer .footer-content .footer-links .link {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 110px;
+            -ms-flex: 0 0 110px;
+                flex: 0 0 110px; }
+        .wrapper footer .footer-content .footer-links .link a {
+          text-decoration: none;
+          color: #000; }

@@ -1,0 +1,275 @@
+/**
+ * Slide Content
+ */
+.slider .slide .slide-content {
+  /**
+	 * Put slider content styles here Bailey!
+	 */ }
+
+/**
+ * Keyframes
+ */
+@-webkit-keyframes fromright {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+@keyframes fromright {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+
+@-webkit-keyframes fromleft {
+  from {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+
+@keyframes fromleft {
+  from {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+
+@-webkit-keyframes toright {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); } }
+
+@keyframes toright {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); } }
+
+@-webkit-keyframes toleft {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); } }
+
+@keyframes toleft {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); } }
+
+/**
+ * Easing Curves
+ */
+/**
+ * Core Styles
+ */
+.slider-container {
+  width: 100vw;
+  height: -webkit-calc(100vh - 128px);
+  height: calc(100vh - 128px); }
+  .slider-container .slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden; }
+    .slider-container .slider .btns {
+      height: 106px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .slider-container .slider .slide {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 100%;
+      background-size: cover;
+      background-position: center top;
+      /* I removed this quarry because it was making the masthead look wrong on a compressed desktop size.
+			   Although it was removed, it still looks and functions normally. It just makes more sense to always
+			   have the image focused right since the content of the image itself if on the right side. */ }
+      .slider-container .slider .slide.anchor-right {
+        background-position: left top;
+        background-position: right top !important; }
+      .slider-container .slider .slide.from-right {
+        -webkit-animation: fromright 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+                animation: fromright 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+      .slider-container .slider .slide.from-left {
+        -webkit-animation: fromleft 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+                animation: fromleft 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+      .slider-container .slider .slide.to-right {
+        -webkit-animation: toright 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+                animation: toright 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+      .slider-container .slider .slide.to-left {
+        -webkit-animation: toleft 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+                animation: toleft 1550ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+      .slider-container .slider .slide.force-show {
+        left: 0; }
+      .slider-container .slider .slide.force-hide {
+        left: 100%; }
+  .slider-container .skip-btns {
+    text-align: center;
+    text-align: center;
+    margin-top: -27px;
+    position: relative;
+    padding: 4px; }
+    .slider-container .skip-btns .btn {
+      display: inline-block;
+      margin: 0 2px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-radius: 100%;
+      position: relative;
+      cursor: pointer; }
+      .slider-container .skip-btns .btn::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 100%; }
+      .slider-container .skip-btns .btn.active::after {
+        background: violet; }
+
+/**
+ * Effects
+ */
+.effect {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+  .effect.fade-ver-in {
+    -webkit-animation: fadeverin 3s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+            animation: fadeverin 3s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadeverin {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes fadeverin {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+  .effect.fade-ver-out {
+    -webkit-animation: fadeverout 600ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+            animation: fadeverout 600ms cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadeverout {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); } }
+
+@keyframes fadeverout {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); } }
+  .effect.fade-hor-in {
+    -webkit-animation: fadehorin 2s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+            animation: fadehorin 2s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadehorin {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes fadehorin {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+  .effect.fade-hor-out {
+    -webkit-animation: fadehorout 1550ms linear 0s 1 normal;
+            animation: fadehorout 1550ms linear 0s 1 normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadehorout {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); } }
+
+@keyframes fadehorout {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); } }
+
+/**
+ * Mobile Breakpoints
+ */

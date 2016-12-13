@@ -1,0 +1,237 @@
+
+/**
+ * Slide Content
+ */
+
+.slider .slide .slide-content {
+	/**
+	 * Put slider content styles here Bailey!
+	 */
+}
+
+/**
+ * Keyframes
+ */
+
+@keyframes fromright {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes fromleft {
+	from {
+		transform: translateX(-200%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes toright {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes toleft {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+/**
+ * Easing Curves
+ */
+
+$expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+/**
+ * Core Styles
+ */
+
+.slider-container {
+	width: 100vw;
+    height: calc(100vh - 128px);
+
+	.slider {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+
+		.btns {
+			height: 106px;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.slide {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 100%;
+			background-size: cover;
+			background-position: center top;
+
+			&.anchor-right {
+				background-position: left top;
+				background-position: right top !important;
+			}
+
+			/* I removed this quarry because it was making the masthead look wrong on a compressed desktop size.
+			   Although it was removed, it still looks and functions normally. It just makes more sense to always
+			   have the image focused right since the content of the image itself if on the right side. */
+
+			&.from-right {
+				animation: fromright 1550ms $expo 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+
+			&.from-left {
+				animation: fromleft 1550ms $expo 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+
+			&.to-right {
+				animation: toright 1550ms $expo 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+
+			&.to-left {
+				animation: toleft 1550ms $expo 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+
+			&.force-show { left: 0; }
+
+			&.force-hide { left: 100%; }
+		}
+	}
+
+	.skip-btns {
+		text-align: center;
+		text-align: center;
+		margin-top: -27px;
+		position: relative;
+		padding: 4px;
+
+		.btn {
+			display: inline-block;
+			margin: 0 2px;
+			width: 12px;
+			height: 12px;
+			background: #fff;
+			border-radius: 100%;
+			position: relative;
+			cursor: pointer;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+			}
+
+			&.active {
+				&::after {
+					background: violet;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Effects
+ */
+
+.effect {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	&.fade-ver-in {
+		@keyframes fadeverin {
+			from {
+				opacity: 0;
+				transform: translateY(-50px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		animation: fadeverin 3s $expo 0s 1 normal;
+		animation-fill-mode: forwards;
+	}
+
+	&.fade-ver-out {
+		@keyframes fadeverout {
+			from {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			to {
+				opacity: 0;
+				transform: translateY(50px);
+			}
+		}
+
+		animation: fadeverout 600ms $expo 0s 1 normal;
+		animation-fill-mode: forwards;
+	}
+
+	&.fade-hor-in {
+		@keyframes fadehorin {
+			from {
+				opacity: 0;
+				transform: translateX(-150px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		animation: fadehorin 2s $expo 0s 1 normal;
+		animation-fill-mode: forwards;
+	}
+
+	&.fade-hor-out {
+		@keyframes fadehorout {
+			from {
+				opacity: 1;
+				transform: translateX(0);
+			}
+			to {
+				opacity: 0;
+				transform: translateX(-150px);
+			}
+		}
+
+		animation: fadehorout 1550ms linear 0s 1 normal;
+		animation-fill-mode: forwards;
+	}
+}
+
+/**
+ * Mobile Breakpoints
+ */
