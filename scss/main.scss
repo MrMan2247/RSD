@@ -154,7 +154,7 @@ body {
         margin: auto;
         justify-content: center;
         text-align: center;
-        
+
         a {
           text-decoration: none;
           padding: 20px;
@@ -184,11 +184,27 @@ body {
     .register {
       max-width: 960px;
       margin: auto;
-      padding: 90px 0;
+      padding: 60px 0;
+
+      h2 {
+        font-family: Apple Chancery;
+        text-align: center;
+        margin: 0;
+      }
+
+      h3 {
+        font-family: Apple Chancery;
+        text-align: center;
+        margin: 5px 0 50px;
+      }
 
       h4 {
         margin: 0;
-        padding: 0 0 100px;
+        padding: 100px 0 100px;
+      }
+
+      p {
+        font-family: arial;
       }
 
       a {
