@@ -1,6 +1,21 @@
 $pink: #cb7ab3;
 $violet: #8950a0;
 
+header {
+	padding: 30px 0;
+}
+
 .wrapper {
-	
+	.masthead {
+		height: 500px;
+		width: 100vw;
+		background-position: center top;
+		background-size: cover;
+
+		&.events { background-image: url('../img/masthead-dancer.jpg'); }
+	}
+}
+
+footer {
+	padding: 40px 0;
 }
